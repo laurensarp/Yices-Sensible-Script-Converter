@@ -48,7 +48,3 @@ write_file(choice)
 
 
 
-
-
-
-
