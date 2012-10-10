@@ -1,3 +1,13 @@
 Convert text files containing propositional statements to yices script
-Bla
-Will do this later
+
+Dependencies:
+Python 3
+
+Usage:
+
+Have a text file containing
+
+vars: a b c ... n
+formula: (a V b) --> c etc
+
+Run yssc.py to convert it to your_file.smt
