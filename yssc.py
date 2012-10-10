@@ -32,11 +32,21 @@ def read_file(name):
             del varlist[0]
         elif str(line).startswith('formula:'):
             cmdline = str(line)
-            commands = cmdline.split(' ')
-            del commands[0]
+            cmdlist = cmdline.split(' ')
+            del cmdlist[0]
+            if 'V' in cmdlist:
+                Vpos = cmdlist.index('V')
+                cmdlist[Vpos] = 'or'
+            elif '-->' in cmdlist:
+                imppos = cmdlist.index('-->')
+                cmdlist[imppos] = 'implies'
+            elif '<->' in cmdlist:
+                iffpos = cmdlist.index('<->')
+                cmdlist[iffpos] = 'make_bi-implication!'
 
 
-
+    commands = '(' + cmdlist[1] + ' ' + cmdlist[0].strip('(') + ' ' + cmdlist[2].strip(')') + ')'
+    
     return text,varlist,commands
 
 

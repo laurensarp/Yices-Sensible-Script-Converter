@@ -10,4 +10,11 @@ Have a text file containing
 vars: a b c ... n
 formula: (a V b) --> c etc
 
+a and b: (a and b)
+a or b: (a V b)
+a implies b: (a --> b)
+a if and only if b: (a <-> b)
+not a: !a
+
+
 Run yssc.py to convert it to your_file.smt
