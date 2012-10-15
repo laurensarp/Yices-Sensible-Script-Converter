@@ -16,7 +16,7 @@ def write_file(filename):
 )
 """.format(filename,var1,var2,var3,var4,commands)
     new_file.write(text)
-    endmessage = 'Succesfully wrote {0}.'.format(filename)
+    endmessage = 'Succesfully wrote {0}'.format(filename)
     print(endmessage)
 
 
